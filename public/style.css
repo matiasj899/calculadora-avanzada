@@ -1,8 +1,31 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 }
-body{
+
+body {
     background-color: #3d3b3c;
+}
+
+input, button {
+    font-family: 'Open Sans', sans-serif;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+input {
+    width: 280px;
+    background-color: #edebe9;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-container {
+    display: flex;
 }
