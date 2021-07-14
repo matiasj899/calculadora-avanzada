@@ -1,10 +1,13 @@
 import Input from "./components/Input";
-
+import { DragDropContext, Droppable,Draggable} from "react-beautiful-dnd";
 function App() {
   return (
-  <div id="input-container">
+  <DragDropContext onDragEnd={(result)=>console.log(result)}>
+<div id="input-container">
     <Input></Input>
   </div>
+  </DragDropContext>
+  
   );
 }
 

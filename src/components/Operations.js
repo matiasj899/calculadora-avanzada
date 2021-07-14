@@ -85,6 +85,7 @@ const Operations = ({ inputValues }) => {
   ));
 
   return (
+      
     <div className="list-cn">
       <ul>{ops}</ul>
     </div>
