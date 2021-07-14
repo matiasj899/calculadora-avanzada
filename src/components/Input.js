@@ -5,13 +5,20 @@ const Input = () => {
     firstValue: 0,
     secondValue: 0,
   });
-
+const [error,setError]=useState(false)
   function numbers(e) {
     const number = Number(e.target.value);
     setInputValues({
       ...inputValues,
       [e.target.name]: number,
     });
+    setError(false)
+  }
+  function notNumber(e){
+    console.log(e.keyCode)
+    if(e.keyCode > 48 && e.keyCode > 57){
+      setError(true)
+    }
   }
   function clear(e) {
     setInputValues({
@@ -26,6 +33,7 @@ const Input = () => {
         <input
           value={inputValues.firstValue}
           onChange={numbers}
+          onKeyDown={notNumber}
           type="number"
           name="firstValue"
         ></input>
@@ -42,10 +50,10 @@ const Input = () => {
           name="secondValue"
         ></input>
       </label>
-
       <button name="secondValue" onClick={clear}>
         CLEAR
       </button>
+      {error?<p>Debe ingresar un numero</p>:null}
       <Operations inputValues={inputValues}></Operations>
     </div>
   );
