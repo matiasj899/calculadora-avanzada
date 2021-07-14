@@ -13,6 +13,15 @@ input, button {
     width: 100px;
     height: 50px;
     border-radius: 5px;
+   
+}
+button{
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input {
