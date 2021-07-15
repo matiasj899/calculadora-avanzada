@@ -26,7 +26,12 @@ const Input = () => {
       [e.target.name]: 0,
     });
   }
-
+  function handleClick(e) {
+    setInputValues({
+      ...inputValues,
+      [e.target.name]: "",
+    });
+  }
   return (
     <div className="second-input-container">
       <div className="third-input-container">
@@ -36,6 +41,7 @@ const Input = () => {
               value={inputValues.firstValue}
               onChange={numbers}
               onKeyDown={notNumber}
+              onFocus={handleClick}
               type="number"
               name="firstValue"
             ></input>
@@ -50,6 +56,8 @@ const Input = () => {
             <input
               value={inputValues.secondValue}
               onChange={numbers}
+              onKeyDown={notNumber}
+              onFocus={handleClick}
               type="number"
               name="secondValue"
             ></input>

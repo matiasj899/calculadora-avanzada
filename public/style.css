@@ -35,6 +35,9 @@ ul li {
     align-items: center;
     border: 1px solid;
     border-radius: 5px;
+    margin: 10px;
+    padding-left: 10px;
+    background-color: #7F7979
 }
 
 p {
@@ -81,12 +84,13 @@ input {
     margin: 20px;
 }
 
-.list-cn{
+.list-cn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.list-cn ul{
+
+.list-cn ul {
     border-radius: 5px;
     width: 65%;
     background-color: #7F7979;
